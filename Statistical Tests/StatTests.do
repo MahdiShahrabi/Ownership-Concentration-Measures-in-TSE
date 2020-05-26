@@ -21,3 +21,6 @@ signrank first_second = largest_owner, exact
 
 ******  PCA Analysis  **********
 pca largest_owner first_second first_sumtwofour sumfive gini herfindhal sscl ssco ssdl ssdo bzcl bzco bzdl
+
+screeplot
+
