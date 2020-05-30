@@ -20,7 +20,7 @@ signrank first_second = largest_owner, exact
 
 
 ******  PCA Analysis  **********
-pca largest_owner first_second first_sumtwofour sumfive gini herfindhal sscl ssco ssdl ssdo bzcl bzco bzdl, comp(7) blanks(0.2)
-estat kmo
-screeplot, yline(1)
+// pca largest_owner first_second first_sumtwofour sumfive gini herfindhal sscl ssco ssdl ssdo bzcl bzco bzdl
+//
+// screeplot
 
