@@ -15,12 +15,18 @@ matrix A = r(Rho)
 esttab matrix(A, fmt(%5.2f)) using Sperman_Test.rtf, unstack not noobs compress replace
 
 ******  Wilcoxon Test  **********
-
+* The main version is done is python
 signrank first_second = largest_owner, exact
 
 
 ******  PCA Analysis  **********
-pca largest_owner first_second first_sumtwofour sumfive gini herfindhal sscl ssco ssdl ssdo bzcl bzco bzdl, comp(7) blanks(0.2)
-estat kmo
+pca largest_owner first_second first_sumtwofour sumfive gini herfindhal sscl ssco ssdl ssdo bzcl bzco bzdl, comp(3) blanks(0.1)
+
 screeplot, yline(1)
 
+* Test to see if is reasonable to run a PCA
+estat kmo
+
+* Orthogonal Rotation
+rotate ,varimax blanks(0.2)
+// rotate, promax(5) oblique blanks(0.1)
