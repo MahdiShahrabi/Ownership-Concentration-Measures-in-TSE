@@ -3,7 +3,7 @@
 
 * Importing Data
 clear all
-import delimited "C:\Users\Mahdi\OneDrive\Master Thesis\Data\Measures1398.csv", encoding(UTF-8) clear 
+import delimited "C:\Users\Mahdi\OneDrive\Master Thesis\Data\Measures1399.csv", encoding(UTF-8) clear 
 
 * Dropping Unused variables
 drop v1
