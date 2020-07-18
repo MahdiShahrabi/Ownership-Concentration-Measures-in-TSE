@@ -43,7 +43,7 @@ def read_inc_data(year,path,sherkat_namad_dict):
                       'سود(زیان)فروش دارائیهای زیستی مولد':'green_profit_','تعدیل ارزش سرمایه گذاریها':'adj_investments_',
                       'سود (زیان) قبل از کسر مالیات':'EBT','مالیات':'Tax','سهم اقلیت از سود سال جاری':'minority_share_from_profit_',
                       'سود (زیان) پس از کسر مالیات':'Net_income','سود انباشته ابتدای دوره':'acumulated_profit',
-                      'تعدیلات سنواتی':'adjustments','سود قابل تخصیص':'divideable_profit','epsخالص':'Net_eps','epsناخالص':'eps_',
+                      'تعدیلات سنواتی':'adjustments','سود قابل تخصیص':'divideable_profit','epsخالص':'EPS','epsناخالص':'eps_',
                       'نسبت سود به فروش':'profit_to_sale','بهای تمام شده املاک فروش رفته و خدمات':'real_estate_income_'}
 
     df.rename(columns=col_name_dict,inplace=True)
@@ -62,7 +62,7 @@ def read_inc_data(year,path,sherkat_namad_dict):
     df['Year'] = df.Fin_year.apply(lambda x: find_year(x))
     
     df = df[['Firm','Symbol','Fin_year','Year','Approve_date','Revenue','Cost_of_revenue','Gross_profit','Operating_expenses',
-    'Operating_income','Interest','Total_other_income_expenses_net','EBT','Tax','Net_income','Net_eps','Capital',
+    'Operating_income','Interest','Total_other_income_expenses_net','EBT','Tax','Net_income','EPS','Capital',
     'Marketcap','acumulated_profit', 'adjustments', 'divideable_profit','exchange_rate_profit', 'ps',
     'profit_to_sale','eps_','minority_share_from_profit_','capital_cost_', 'real_estate_income_','green_profit_',
     'adj_investments_']]

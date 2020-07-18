@@ -1,4 +1,5 @@
 import jdatetime as jd
+import numpy as np
 
 ######################################
 
@@ -32,3 +33,14 @@ def find_year(x):
         out = year
         
     return(out)
+
+######################################
+
+def find_month(x):
+    
+    try:
+        month = x.month
+    except:
+        month =np.nan
+            
+    return(month)
