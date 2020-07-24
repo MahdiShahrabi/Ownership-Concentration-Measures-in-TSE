@@ -56,6 +56,7 @@ def read_blnc_data(year,path,sherkat_namad_dict):
     
     # Finding Year
     df = df[~pd.isnull(df.Fin_year)]  
+#     print(len(df[pd.isnull(df.Fin_year)]))
     df['Year'] = df.Fin_year.apply(lambda x: find_year(x))
     
     df['Book_value'] = df.Tot_asset-df.Tot_lib

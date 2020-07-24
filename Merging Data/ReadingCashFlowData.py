@@ -65,7 +65,6 @@ def read_cf_data(year,path,sherkat_namad_dict):
 
     df = df[~pd.isnull(df.Fin_year)]  
     df['Year'] = df.Fin_year.apply(lambda x: find_year(x))
-    df = df[df['Year']>=1389]
 
     df_all = df[['Year','Firm', 'Symbol', 'Fin_year', 'Approve_date',
            'Operating_cash_flow','Investing_cash_flow',
