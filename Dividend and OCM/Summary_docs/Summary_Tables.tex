@@ -1,0 +1,95 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{ amssymb }
+\usepackage{booktabs}
+\usepackage{pdflscape}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\arrow}{\quad\Longrightarrow\quad}
+
+\makeatother
+
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+ 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+
+\lstdefinestyle{Python}{
+    language        = Python,
+    frame           = lines, 
+    basicstyle      = \footnotesize,
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily
+}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{Ownership Concentration}
+\newcommand\hwnumber{}                  % <-- homework number
+\newcommand\NetIDa{Mahdi Shahrabi}           % <-- NetID of person #1
+
+
+\headheight 35pt
+\lhead{\NetIDa}
+\lhead{\NetIDa\\}                 % <-- Comment this line out for problem sets (make sure you are person #1)
+\chead{\textbf{\Large Summary Descriptive of Data \hwnumber}}
+\rhead{\course\\ }
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+%%%%%%%%%%%%%%%%%%%%%        BEGIN         %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\title{Ownership Concentration Measures and Firm Characteristics}
+\author{\Large\textbf{Mahdi Shahrabi} \\~\\m.m.shahrabi@gmail.com}
+\maketitle
+
+\newpage
+\pagestyle{fancyplain}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%                       Problem 1                 %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{"StataTex/Teble_summary_I_detail.tex"}
+\begin{landscape}
+\input{"StataTex/Teble_summary_I.tex"}
+\end{landscape}
+
+\input{"StataTex/Teble_summary_II_detail.tex"}
+\begin{landscape}
+	\input{"StataTex/Teble_summary_II.tex"}
+\end{landscape}
+
+\input{"StataTex/Teble_summary_III_detail.tex"}
+\begin{landscape}
+	\input{"StataTex/Teble_summary_III.tex"}
+\end{landscape}
+
+%%%%%%%%%%%%%%%%%%%%%       END       %%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
