@@ -6,3 +6,10 @@ ComputingMeasures/.ipynb_checkpoints/ConcentrationMeasures-checkpoint.ipynb
 ComputingMeasures/.ipynb_checkpoints/ConcentrationMeasures-checkpoint.ipynb
 *.tex
 *.csv
+*.png
+*.aux
+*.log
+*.gz
+*.out
+*.aux
+*.log
