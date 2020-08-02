@@ -36,7 +36,8 @@ def fill_shapley_banzhaf(data,SDATA,fast_mode = True,time_pnt=False,major_mode='
         sym = data.Symbol.iloc[index]
         col_names = col_dict[mode]
         # Progress output
-        print('The symbol ',sym, ' mode: ',mode,', ',cnt,' from ', len(ITEMS))
+        if time_pnt:
+            print('The symbol ',sym, ' mode: ',mode,', ',cnt,' from ', len(ITEMS))
         cnt+=1 
         
         # Finding and assigning  value
