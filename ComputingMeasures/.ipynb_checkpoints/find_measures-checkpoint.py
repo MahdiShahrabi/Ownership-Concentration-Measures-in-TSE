@@ -55,6 +55,17 @@ def find_measures(year,month=0,pnt=False):
     temp = SDATA.groupby('Symbol',as_index=False).agg({'percent':{lambda x: sum(nth_max(x,nth=[1,5],interval=True))}}).rename(columns={'percent':'Sumfive'})
     CMdf = pd.merge(CMdf,temp,left_on='Symbol',right_on='Symbol',how='left').rename(columns={('Sumfive', '<lambda>'):'Sumfive'})
     
+    temp = SDATA.groupby('Symbol',as_index=False).agg({'percent':{lambda x: sum(nth_max(x,nth=[1,4],interval=True))}}).rename(columns={'percent':'Sumfour'})
+    CMdf = pd.merge(CMdf,temp,left_on='Symbol',right_on='Symbol',how='left').rename(columns={('Sumfour', '<lambda>'):'Sumfour'})
+
+
+    temp = SDATA.groupby('Symbol',as_index=False).agg({'percent':{lambda x: sum(nth_max(x,nth=[1,3],interval=True))}}).rename(columns={'percent':'Sumthree'})
+    CMdf = pd.merge(CMdf,temp,left_on='Symbol',right_on='Symbol',how='left').rename(columns={('Sumthree', '<lambda>'):'Sumthree'})
+
+
+    temp = SDATA.groupby('Symbol',as_index=False).agg({'percent':{lambda x: sum(nth_max(x,nth=[1,2],interval=True))}}).rename(columns={'percent':'Sumtwo'})
+    CMdf = pd.merge(CMdf,temp,left_on='Symbol',right_on='Symbol',how='left').rename(columns={('Sumtwo', '<lambda>'):'Sumtwo'})
+    
     # Gini
     temp = SDATA.groupby('Symbol',as_index=False).agg({'percent':{lambda x: gini(list(x))}}).rename(columns={'percent':'Gini'})
     CMdf = pd.merge(CMdf,temp,left_on='Symbol',right_on='Symbol',how='left').rename(columns={('Gini', '<lambda>'):'Gini'})
